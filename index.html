@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+
+        <!-- Fontawesome CSS-->
+        <link rel="stylesheet" href="assets/fonts/css/all.css">
+
+        <!-- Swiper CSS-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        
+        <!-- Custom CSS-->
+        <link rel="stylesheet" href="css/custom.css">
+
+        <title>Coca Cola 3D App Landing Page</title>
+    </head>
+    <body>
+        <section>
+            <div class="circle"></div>
+            <header>
+             <!-- Logo and navigation bar -->
+                        <!-- Brand -->
+                        <div class="logo">
+                            <a class="navbar-brand" href="#">
+                                <h1>1</h1>
+                                <h1>Coca</h1>
+                                <h2>Cola</h2>
+                                <h3>Journey</h3>
+                                <p>Refreshing the world, one story at a time</p>
+                            </a>
+                        </div>
+                        <div class="toggle" onclick="toggleMenu()"></div>
+                        <nav class="navbar sticky-top navbar-expand-sm navbar_coca_cola">
+                            <div class="container">
+                        <!-- Collapsible Navbar Menu Icon-->
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+
+                                <!-- Link Menu item button to the links class navbar-collapse selector-->
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <!-- Links -->
+                                    <ul class="navbar-nav ms-auto">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="index.html">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom"
+                                            title="About Web 3D Applications" data-bs-content="Web 3D Application's Coursework">About</a>
+                                        </li>
+
+                                        <!-- Dropdown -->
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-bs-toggle="dropdown">Drinks</a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="cocacola.html">Coca Cola</a>
+                                                <a class="dropdown-item" href="sprite.html">Sprite</a>
+                                                <a class="dropdown-item" href="fanta.html">Fanta</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom"
+                                            title="Contact Us" data-bs-content="Chichester 1, University of Sussex, Email: fg247@sussex.ac.uk">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+            </header>
+            <!-- Main body -->
+            <div class="container main_contents">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="carousel-container">
+                            <div class="carousel">
+                                <div class="carousel-item">
+                                    <img src="assets/images/main_3D.jpeg" alt="Carousel Image 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/images/main_3D2.jpg" alt="Carousel Image 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/images/main_3D3.jpg" alt="Carousel Image 3">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/images/main_3D4.jpg" alt="Carousel Image 4">
+                                </div>
+                            </div>
+                        <button class="prev" onclick="prevSlide()"><</button>
+                        <button class="next" onclick="nextSlide()">></button>
+                    </div>
+                    <div id="main_text">
+                        <h2>TASTE THE FEELING</h2>
+                        <p>Founded by Dr John S Pemberton, a company built on heritage and innovation.
+                        From our original classic to a portfolio spanning countless beloved brands, 
+                        we have been defining refreshment for generations.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div id="main_img" class="imgBox">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><iframe src="cocacolacan.html"></iframe></div>
+                                    <div class="swiper-slide"><iframe src="spritecan.html"></iframe></div>
+                                    <div class="swiper-slide"><iframe src="fantacan.html"></iframe></div>
+                                </div>
+                                <!-- Pagination -->
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+
+            <!--Your 3D App footer-->
+            <nav class="navbar navbar-expand-sm footer">
+                <div class="container">
+                    <div class="navbar-text float-left copyright">
+                        <p><span class="align-baseline"></span>&copy 2024 The Coca-Cola Company. All Rights Reserved. </span></p>
+                    </div>
+                    <div class="navbar-text social">
+                        <a href="#"><span><i class="fab fa-instagram fa-2x fa-pull-right"></i></span></a>
+                        <a href="#"><span><i class="fab fa-twitter fa-2x fa-pull-right"></i></span></a>
+                        <a href="#"><span><i class="fab fa-youtube fa-2x fa-pull-right"></i></span></a>
+                        <a href="#"><span><i class="fab fa-facebook fa-2x fa-pull-right"></i></span></a>
+                    </div>
+                </div>
+            </nav> 
+        </section>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS, then Fontawesome -->
+        <script src="js/jquery-3.7.1.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="assets/fonts/js/all.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="js/custom.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                effect: 'coverflow',
+                grabCursor:true,
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 200,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                pagination: {
+                    el: 'swiper-pagination',
+                },
+                loop: true,
+            });
+
+            function toggleMenu(){
+                const menuToggle = document.querySelector('.toggle');
+                const navbar = document.querySelector('.navbar_coca_cola .navbar-nav')
+                menuToggle.classList.toggle('active')
+                navbar.classList.toggle('active')
+            }
+        </script>
+        <script>
+            let slideIndex = 0;
+            const slideInterval = 5000;
+    
+            function showSlide(index) {
+                const slides = document.querySelectorAll('.carousel-item');
+                const totalSlides = slides.length;
+    
+                if (index >= totalSlides) {
+                    slideIndex = 0;
+                } else if (index < 0) {
+                    slideIndex = totalSlides - 1;
+                } else {
+                    slideIndex = index;
+                }
+    
+                const offset = -slideIndex * 100;
+                document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
+            }
+    
+            function nextSlide() {
+                showSlide(slideIndex + 1);
+            }
+    
+            function prevSlide() {
+                showSlide(slideIndex - 1);
+            }
+
+            function startSlideShow() {
+                setInterval(nextSlide, slideInterval);
+            }
+    
+            // Initialize the carousel
+            showSlide(slideIndex);
+            startSlideShow();
+        </script>     
+        <script>
+            // Initialize popovers
+            document.addEventListener('DOMContentLoaded', function () {
+                var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+                var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                    return new bootstrap.Popover(popoverTriggerEl);
+                });
+            });
+        </script>
+    </body>
+</html>

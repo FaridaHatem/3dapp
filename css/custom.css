@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+/* Method to declare your own fonts */
+@font-face {
+    font-family: cocaColaFont;
+    src: url(../assets/fonts/loki_cola/LOKICOLA.TTF);
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #161616;
+    flex-direction: column;
+}
+
+.circle
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #e51e2a;
+    clip-path: circle(70% at right -20%);
+}
+
+.logo h1 {
+    font-family: cocaColaFont;
+    font-size: 2.5vw;
+    margin: 0;
+    margin-top: -0.7vw;
+    margin-bottom: -1.5vw;
+    float: left;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0.2vw;
+    color: white;
+}
+
+.logo h2 {
+    font-family: cocaColaFont;
+    font-size: 2.5vw;
+    margin-top: -0.35vw;
+    margin-bottom: -1.5vw;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0.2vw;
+    float: left;
+    color: white;
+}
+
+.logo h3 {
+    font-size: 1.5vw;
+    margin-top: 0;
+    margin-bottom: -0.5vw;
+    padding-top: 0;
+    padding-left: 0;
+    float: left;
+    color: black;
+}
+
+.logo p {
+    font-size: 0.57vw;
+    margin-top: 1.9vw;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-left: 0.3vw;
+    color: black;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1vw 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar_coca_cola .navbar-nav .nav-link {
+    color: white;
+    font-weight: 500;
+    margin-left: 4vw;
+}
+.main_contents {
+    display: flex;
+}
+#main_text {
+    width: 40%;
+    margin-top: 0.5vw;
+    height: auto;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 0;
+}
+
+#main_text h2 {
+    color: white;
+    font-size: 2.7vw;
+    margin-top: 0;
+    margin-bottom: 1vw;
+    line-height: 1.4em;
+    font-weight: 700;
+}
+
+#main_text p {
+    color: white;
+    font-size: 1vw;
+    margin: 0;
+    line-height: 1.2;
+    flex-grow: 1;
+}
+
+#main_text a {
+    display: inline-block;
+    margin-top: 2vw;
+    padding: 0.8vw 1.5vw;
+    background: #e51e2a;
+    color: white;
+    border-radius: 4vw;
+    font-weight: 500;
+    letter-spacing: 0.1vw;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* CSS rule to style the footer */
+.footer {
+    color: #030303;
+    height: 3vw;
+    margin-top: auto;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.navbar-text > a {
+    font-size: 0.8vw;
+}
+
+.navbar-text > p {
+    color: rgb(255, 255, 255);
+    font-size: 1.1vw;
+    text-decoration: none;
+}
+
+.footer .copyright {
+    padding-top: 2.7vw;
+    padding-left: 5vw;
+}
+
+.footer .social {
+    display: flex;
+    justify-content: center;
+    padding-right: 4.9vw;
+}
+
+.footer .social a {
+    display: inline-block;
+    width: 30%;
+    background: #222;
+    transition: 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 0.5vw;
+    font-size: 0.8vw;
+    padding-right: 0.97vw;
+    color: white;
+    margin-right: 0.5vw;
+}
+
+.footer .social a:hover {
+    background: #e51e2a;
+    transform: translateY(-1vw);
+}
+
+/* CSS rule to style the carousel */
+.carousel-container {
+    height: auto;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: left;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    background-position: center;
+    background-size: cover;
+    width: 50%;
+    height: 30vw;
+    display: flex;
+    margin-right: 0;
+    flex: 0 0 100%;
+}
+
+.carousel img {
+    width: 70%;
+    height: 80%;
+    display: block;
+}
+
+.prev, .next {
+    position: relative;
+    transform: translateY(-50%);
+    padding: 2% 4%;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    bottom: 10px;
+    font-size: 1em;
+}
+
+.prev {
+    left: 0px;
+    margin-right: 25%;
+}
+
+.next {
+    right: 0px;
+    margin-left: 25%;
+}
+
+.swiper-container {
+    width: 30%;
+    padding-top: 1vw;
+    padding-bottom: 2vw;
+    margin-left: 20px;
+    margin-right: 0;
+    height: 100px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    float: left;
+    right: 0;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 20vw;
+    height: 35vw;
+    display: flex;
+    justify-content: center;
+}
+
+.imgBox {
+    position: relative;
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0px;
+}
+
+#main_img {
+    width: 1vw;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#main_img img {
+    max-width: 15vw;
+}
+
+.swiper-slide img{
+    position: absolute;
+    bottom: 0;
+    max-height: 100%;
+}
+
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right
+{
+    background-image: none;
+}
+
+@media (max-width: 991px)
+{
+    header
+    {
+        padding: 40px;
+    }
+    section
+    {
+        padding: 150px 40px;
+    }
+    .footer .copyright
+    {
+        padding-left: 40px;
+    }
+    .footer .social
+    {
+        padding-right: 40px;
+    }
+    .container .main_contents
+    {
+        flex-direction: column;
+    }
+    #main_text,
+    #main_img
+    {
+        max-width: 100%;
+    }
+    .swiper-slide
+    {
+        height: 30vw;
+    }
+    header .navbar_coca_cola .navbar-nav
+    {
+        display: none;
+    }
+    header .navbar_coca_cola .navbar-nav .active
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #e51e2a;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+    }
+    header .navbar_coca_cola .navbar-nav .nav-link
+    {
+        margin: 10px 0;
+        font-size: 1.5em;
+        font-weight: 300;
+    }
+    .toggle
+    {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        z-index: 10000;
+    }
+    .toggle.active
+    {
+        position: fixed;
+        right: 40px;
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .carousel-container,
+    .swiper-container {
+        width: 100%;
+        margin: 0;
+    }
+    .swiper-container {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .circle {
+        clip-path: circle(60% at right -10%);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .circle {
+        clip-path: circle(50% at right 0%);
+    }
+}
+
+/* Styles for product cards */
+.card {
+    margin-bottom: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card-img-top {
+    max-height: 200px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+/*
+@font-face {
+    font-family: OpenSans;
+    src: url(../assets/fonts/Open_Sans/static/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: Oswald;
+    src: url(../assets/fonts/Oswald/static/Oswald-Regular.ttf);
+} 
+/* Extra small devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+/* Small devices (landscape phones, 576px and up)
+*
+@media (min-width: 576px) {
+

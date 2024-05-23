@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+
+        <!-- Fontawesome CSS-->
+        <link rel="stylesheet" href="assets/fonts/css/all.css">
+
+        <!-- Swiper CSS-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        
+        <!-- Custom CSS-->
+        <link rel="stylesheet" href="css/custom.css">
+
+        <title>Sprite Drink Page</title>
+    </head>
+    <body>
+        <section>
+            <div class="circle"></div>
+            <header>
+             <!-- Logo and navigation bar -->
+                        <!-- Brand -->
+                        <div class="logo">
+                            <a class="navbar-brand" href="#">
+                                <h1>1</h1>
+                                <h1>Coca</h1>
+                                <h2>Cola</h2>
+                                <h3>Journey</h3>
+                                <p>Refreshing the world, one story at a time</p>
+                            </a>
+                        </div>
+                        <div class="toggle" onclick="toggleMenu()"></div>
+                        <nav class="navbar sticky-top navbar-expand-sm navbar_coca_cola">
+                            <div class="container">
+                        <!-- Collapsible Navbar Menu Icon-->
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+
+                                <!-- Link Menu item button to the links class navbar-collapse selector-->
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <!-- Links -->
+                                    <ul class="navbar-nav ms-auto"> <!-- Use mx-auto to align centre, default to left or use mr-auto, these are used pull-right-->
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="index.html">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">About</a>
+                                        </li>
+
+                                        <!-- Dropdown -->
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-bs-toggle="dropdown">Drinks</a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="cocacola.html">Coca Cola</a>
+                                                <a class="dropdown-item" href="sprite.html">Sprite</a>
+                                                <a class="dropdown-item" href="fanta.html">Fanta</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+            </header>
+            <div class="row" style="flex: 1; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%;"></div>
+            <!--Your 3D App footer-->
+            <nav class="navbar navbar-expand-sm footer">
+                <div class="container">
+                    <div class="navbar-text float-left copyright">
+                        <p><span class="align-baseline"></span>&copy 2024 The Coca-Cola Company. All Rights Reserved. </span></p>
+                    </div>
+                    <div class="navbar-text social">
+                        <a href="#"><span><i class="fab fa-instagram fa-2x fa-pull-right"></i></span></a>
+                        <a href="#"><span><i class="fab fa-twitter fa-2x fa-pull-right"></i></span></a>
+                        <a href="#"><span><i class="fab fa-youtube fa-2x fa-pull-right"></i></span></a>
+                        <a href="#"><span><i class="fab fa-facebook fa-2x fa-pull-right"></i></span></a>
+                    </div>
+                </div>
+            </nav> 
+        </section>
+        <div class="row"></div>
+        <script src="js/jquery-3.7.1.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="assets/fonts/js/all.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // Fetch JSON data
+                fetch("model/data.json")
+                    .then(response => response.json())
+                    .then(data => {
+                        // Get the products array from the JSON data
+                        const products = data.products;
+
+                        // Find the Coca-Cola product
+                        const spriteProduct = products.find(product => product.name.toLowerCase() === "sprite");
+
+                        // Get the container where the product cards will be inserted
+                        const cardContainer = document.querySelector('.row');
+
+                        // Loop through each product and create a card for it
+                        if (spriteProduct) {
+                            // Create the card element
+                            const card = document.createElement('div');
+                            card.className = 'col-sm-4'; // Adjust column size as needed
+
+                            // Fill the card with product data
+                            card.innerHTML = `
+                                <div class="card">
+                                    <a href="${spriteProduct.link}">
+                                        <img class="card-img-top img-fluid img-thumbnail" src="${spriteProduct.image}" alt="${spriteProduct.name}">
+                                    </a>
+                                    <div class="card-body">
+                                        <h3 class="card-title">${spriteProduct.name}</h3>
+                                        <p class="card-text">${spriteProduct.description}</p>
+                                        <a href="${spriteProduct.link}" class="btn btn-primary">Find out more ...</a>
+                                    </div>
+                                </div>
+                            `;
+
+                            // Append the card to the container
+                            cardContainer.appendChild(card);
+                        }
+                    })
+                    .catch(error => console.error('Error fetching products:', error));
+            });
+        </script>  
+    </body>
+</html>
